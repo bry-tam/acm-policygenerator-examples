@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config-cm
+  namespace: app-cm
+data:
+  app-enabled: "true"

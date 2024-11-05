@@ -1,0 +1,17 @@
+---
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: gen-policy03
+policyDefaults:
+  namespace: policies
+  remediationAction: enforce
+  consolidateManifests: false
+placementBindingDefaults:
+  name: "policy03-binding"
+
+policies:
+  - name: policy03
+    manifests:
+      - path: configmap3.yml
+

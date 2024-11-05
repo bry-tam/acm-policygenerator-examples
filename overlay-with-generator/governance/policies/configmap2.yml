@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config2
+  namespace: app-02
+data:
+  app-enabled: "true"

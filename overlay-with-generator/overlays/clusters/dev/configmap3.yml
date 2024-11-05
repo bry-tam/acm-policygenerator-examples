@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config3
+  namespace: app-03
+data:
+  app-enabled: "true"
