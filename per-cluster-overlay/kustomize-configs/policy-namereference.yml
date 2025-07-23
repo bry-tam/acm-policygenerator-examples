@@ -1,0 +1,12 @@
+---
+nameReference:
+- kind: Policy
+  fieldSpecs:
+  - kind: Policy
+    path: spec/dependencies/name
+  - kind: Policy
+    path: spec/policy-templates/extraDependencies/name
+  - kind: PlacementBinding
+    path: subjects/name
+
+

@@ -1,0 +1,6 @@
+---
+nameReference:
+- kind: Placement
+  fieldSpecs:
+  - kind: PlacementBinding
+    path: placementRef/name

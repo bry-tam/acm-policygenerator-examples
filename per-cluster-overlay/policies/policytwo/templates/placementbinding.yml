@@ -1,0 +1,12 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: PlacementBinding
+metadata:
+  name: policytwo-placement-binding
+placementRef:
+  apiGroup: cluster.open-cluster-management.io
+  kind: Placement
+  name: policytwo-placement
+subjects:
+  - apiGroup: policy.open-cluster-management.io
+    kind: Policy
+    name: policytwo

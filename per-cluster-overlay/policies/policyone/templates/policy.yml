@@ -1,0 +1,23 @@
+---
+apiVersion: policy.open-cluster-management.io/v1
+kind: Policy
+metadata:
+  name: policyone
+  labels:
+    cluster: {{ .Values.cluster.name }}
+spec:
+  disabled: false
+  remediationAction: enforce
+  policy-templates:
+    - objectDefinition:
+        {{- include "p.nginx.deployment" .}}
+
+
+    - extraDependencies:
+        - name: policyone
+          namespace: policies
+          apiVersion: policy.open-cluster-management.io/v1
+          compliance: Compliant
+          kind: Policy
+      objectDefinition:
+        {{- include "p.nginx.configmap" .}}

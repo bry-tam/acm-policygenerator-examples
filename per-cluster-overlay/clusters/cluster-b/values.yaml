@@ -1,0 +1,4 @@
+replicaCount: 1
+
+cluster:
+  name: cluster-b
